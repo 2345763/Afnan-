@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Afnan Interior - Premium Interior Design Studio in New Delhi. Designing elegant, thoughtful, and timeless spaces for modern living.">
+    <meta name="keywords" content="Interior Design, Modular Kitchen, Living Room Design, Renovation, New Delhi Interiors, Afnan Interior, Badarpur Interior Designer">
+    <meta name="theme-color" content="#fbfaf8">
+    <title>Afnan Interior | Premium Interior Design Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --color-bg: #fbfaf8; /* Warm ivory */
+            --color-text-main: #2a2a2a; /* Charcoal */
+            --color-text-muted: #6b6b6b;
+            --color-accent: #c5a880; /* Champagne/Beige */
+            --color-accent-hover: #b3956d;
+            
+            /* Glassmorphism Variables */
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+            --glass-blur: 16px;
+            
+            --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            --border-radius: 16px;
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--color-text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: none;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
+        }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: var(--color-text-main);
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+
+        /* Initial Load Animations for Hero */
+        @keyframes slideUpFade {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleUp {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-on-load {
+            opacity: 0;
+            animation: slideUpFade 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .anim-delay-1 { animation-delay: 0.2s; }
+        .anim-delay-2 { animation-delay: 0.4s; }
+        .anim-delay-3 { animation-delay: 0.6s; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--color-bg); }
+        ::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 4px; }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            padding: 20px 0;
+        }
+
+        nav.scrolled {
+            padding: 15px 0;
+            background: rgba(251, 250, 248, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--color-text-main);
+            z-index: 1001;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-text-main);
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1.8rem;
+            color: var(--color-text-main);
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            height: 100dvh;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0 5%;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            transform: scale(1.05);
+            animation: subtleZoom 25s ease-in-out infinite alternate;
+        }
+
+        @keyframes subtleZoom {
+            0% { transform: scale(1.02); }
+            100% { transform: scale(1.15); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(251, 250, 248, 0.7) 0%, rgba(251, 250, 248, 0.2) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: clamp(30px, 5vw, 60px);
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            animation: scaleUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 20px;
+            color: var(--color-text-main);
+            text-shadow: 0 4px 20px rgba(255,255,255,0.4);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 40px;
+            color: #333;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.1));
+            border-radius: 50%;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.5);
+            z-index: 1;
+            pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .float-1 { top: 15%; left: 10%; width: clamp(60px, 10vw, 100px); height: clamp(60px, 10vw, 100px); animation-delay: 0s; }
+        .float-2 { bottom: 15%; right: 10%; width: clamp(80px, 15vw, 150px); height: clamp(80px, 15vw, 150px); animation-delay: 2s; }
+        .float-3 { top: 30%; right: 20%; width: clamp(40px, 8vw, 70px); height: clamp(40px, 8vw, 70px); animation-delay: 4s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(15deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: var(--color-text-main);
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-15px) translateX(-50%); }
+            60% { transform: translateY(-7px) translateX(-50%); }
+        }
+
+        /* About Section */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-image { position: relative; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .about-image img { width: 100%; height: auto; transition: transform 0.7s ease; }
+        .about-image:hover img { transform: scale(1.05); }
+        .about-text h2 { font-size: 3rem; margin-bottom: 25px; }
+        .about-text p { color: var(--color-text-muted); margin-bottom: 30px; font-size: 1.1rem; }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .stat-card { padding: 25px; text-align: center; }
+        .stat-number { font-size: 2.5rem; font-family: 'Playfair Display', serif; color: var(--color-accent); margin-bottom: 5px; }
+        .stat-label { font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Services Section */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { padding: 40px 30px; text-align: center; transition: var(--transition-smooth); position: relative; overflow: hidden; z-index: 1; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, transparent, rgba(197, 168, 128, 0.05)); z-index: -1; opacity: 0; transition: var(--transition-smooth); }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-color: rgba(255,255,255,0.9); }
+        .service-card:hover::before { opacity: 1; }
+        .service-icon { font-size: 2.5rem; color: var(--color-accent); margin-bottom: 20px; transition: transform 0.3s ease; }
+        .service-card:hover .service-icon { transform: scale(1.1); }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 15px; }
+        .service-card p { color: var(--color-text-muted); font-size: 0.95rem; }
+
+        /* Projects Section */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; }
+        .gallery-item { position: relative; border-radius: var(--border-radius); overflow: hidden; cursor: pointer; aspect-ratio: 4/3; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+        .gallery-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%); display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; opacity: 0; transition: var(--transition-smooth); }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-title { color: #fff; font-size: 1.4rem; margin-bottom: 5px; transform: translateY(20px); transition: var(--transition-smooth); }
+        .gallery-category { color: var(--color-accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transform: translateY(20px); transition: var(--transition-smooth); transition-delay: 0.1s; }
+        .gallery-item:hover .gallery-title, .gallery-item:hover .gallery-category { transform: translateY(0); }
+
+        /* Lightbox */
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); backdrop-filter: blur(5px); z-index: 2000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+        .lightbox.active { display: flex; opacity: 1; }
+        .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+        .lightbox-close { position: absolute; top: 30px; right: 30px; color: #fff; font-size: 2rem; cursor: pointer; background: none; border: none; transition: color 0.3s; }
+        .lightbox-close:hover { color: var(--color-accent); }
+
+        /* Reviews Section */
+        .reviews-section { position: relative; padding: 120px 0; }
+        .reviews-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at right center, rgba(197, 168, 128, 0.08) 0%, transparent 60%); z-index: -1; }
+        .rating-overview { text-align: center; margin-bottom: 60px; }
+        .rating-number { font-size: 4rem; font-family: 'Playfair Display', serif; color: var(--color-text-main); line-height: 1; margin-bottom: 10px; }
+        .stars { color: #FFD700; font-size: 1.5rem; margin-bottom: 10px; }
+        .rating-text { font-size: 1.1rem; color: var(--color-text-muted); }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .review-card { padding: 40px; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition-smooth); }
+        .review-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.06); }
+        .review-text { font-style: italic; font-size: 1.05rem; color: var(--color-text-main); margin-bottom: 30px; position: relative; }
+        .review-text::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 4rem; color: rgba(197, 168, 128, 0.2); position: absolute; top: -25px; left: -15px; line-height: 1; }
+        .client-info { display: flex; align-items: center; gap: 15px; }
+        .client-avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+        .client-details h4 { font-size: 1rem; margin-bottom: 2px; font-family: 'Outfit', sans-serif; font-weight: 600; }
+        .verified-badge { font-size: 0.8rem; color: #2e7d32; display: flex; align-items: center; gap: 5px; }
+        .disclaimer { text-align: center; font-size: 0.8rem; color: #999; margin-top: 40px; }
+
+        /* Direct Contact Section */
+        .contact-section { background-color: #fff; }
+        
+        .direct-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-card {
+            padding: 40px 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+            height: 100%;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border-color: rgba(255,255,255,0.9);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover .icon-circle {
+            transform: scale(1.1);
+        }
+
+        .icon-whatsapp { background-color: rgba(37, 211, 102, 0.1); color: #25D366; }
+        .icon-email { background-color: rgba(197, 168, 128, 0.15); color: var(--color-accent); }
+        .icon-location { background-color: rgba(66, 133, 244, 0.1); color: #4285F4; }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            color: var(--color-text-muted);
+            margin-bottom: 5px;
+            font-size: 1.05rem;
+        }
+        
+        .contact-card .sub-text {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .contact-actions .btn {
+            width: 100%;
+        }
+
+        .btn-maps {
+            background-color: #4285F4;
+            color: white;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .btn-maps:hover {
+            background-color: #3367D6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+        }
+
+        /* Footer */
+        footer { background-color: var(--color-text-main); color: #fff; padding: 80px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
+        .footer-brand h2 { color: #fff; font-size: 2rem; margin-bottom: 15px; }
+        .footer-brand p { color: #aaa; font-size: 1rem; max-width: 350px; margin-bottom: 25px; }
+        .social-links { display: flex; gap: 15px; }
+        .social-links a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); color: #fff; transition: var(--transition-smooth); }
+        .social-links a:hover { background: var(--color-accent); transform: translateY(-3px); }
+        .footer-heading { color: #fff; font-family: 'Outfit', sans-serif; font-size: 1.2rem; margin-bottom: 25px; }
+        .footer-links li { margin-bottom: 15px; }
+        .footer-links a { color: #aaa; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--color-accent); padding-left: 5px; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 0.9rem; }
+
+        /* Highly Optimized Mobile Design */
+        @media (max-width: 1024px) {
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            /* Full-screen Mobile Menu with Staggered Anim */
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: 100%; 
+                width: 100vw;
+                height: 100dvh;
+                background: rgba(251, 250, 248, 0.97);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: left 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.4s ease, transform 0.4s ease;
+            }
+
+            .nav-links.active li {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            .nav-links.active li:nth-child(1) { transition-delay: 0.2s; }
+            .nav-links.active li:nth-child(2) { transition-delay: 0.3s; }
+            .nav-links.active li:nth-child(3) { transition-delay: 0.4s; }
+            .nav-links.active li:nth-child(4) { transition-delay: 0.5s; }
+            .nav-links.active li:nth-child(5) { transition-delay: 0.6s; }
+            .nav-links.active li:nth-child(6) { transition-delay: 0.7s; }
+
+            .nav-links a {
+                font-size: 2rem;
+                font-family: 'Playfair Display', serif;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active {
+                transform: rotate(90deg);
+            }
+
+            /* Mobile Hero Layout Fixes */
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 16px 20px;
+            }
+
+            /* Adjust rest of site for mobile */
+            .about-text h2 { font-size: 2.2rem; }
+            .section-padding { padding: 70px 0; }
+            .direct-contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+        }
+
+        /* Accessibility: Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">AFNAN INTERIOR</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80" alt="Luxury Interior Design" class="hero-bg" fetchpriority="high">
+        <div class="hero-overlay"></div>
+        
+        <div class="floating-element float-1"></div>
+        <div class="floating-element float-2"></div>
+        <div class="floating-element float-3"></div>
+
+        <div class="hero-content glass-panel">
+            <h1 class="animate-on-load">Designing Spaces That Feel Like Home.</h1>
+            <p class="animate-on-load anim-delay-1">Elegant interiors, thoughtful details and timeless spaces crafted for modern living. Experience the perfect blend of luxury and functionality.</p>
+            <div class="hero-buttons animate-on-load anim-delay-2">
+                <a href="#projects" class="btn btn-primary">Explore Our Work</a>
+                <a href="tel:7818905281" class="btn btn-glass"><i class="fas fa-phone-alt"></i> Call 7818905281</a>
+                <a href="https://wa.me/917818905281" target="_blank" class="btn btn-glass"><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp Us</a>
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator animate-on-load anim-delay-3" aria-label="Scroll Down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <section id="about" class="section-padding">
+        <div class="container about-grid">
+            <div class="about-image reveal">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Modern Minimalist Living Room" loading="lazy">
+            </div>
+            <div class="about-text reveal delay-1">
+                <h6 style="color: var(--color-accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">About Studio</h6>
+                <h2>Crafting Beautiful Spaces with Purpose</h2>
+                <p>Afnan Interior is a premium interior design studio based in New Delhi. We specialize in transforming ordinary houses into extraordinary homes, combining aesthetics with practical functionality.</p>
+                <p>With an unwavering attention to detail and a passion for bespoke design, we handle every aspect of the project—from initial concept and space planning to custom furniture and final styling.</p>
+                
+                <div class="stats-grid glass-panel" style="margin-top: 40px;">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Bespoke Interiors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">Residential Spaces</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Commercial Spaces</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="100" data-suffix="%">0</div>
+                        <div class="stat-label">Attention to Detail</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-header reveal">
+                <h6 style="color: var(--color-accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Our Expertise</h6>
+                <h2 class="section-title">Premium Design Services</h2>
+                <p class="section-subtitle">Comprehensive interior solutions tailored to your lifestyle, crafted with precision and elegance.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card glass-panel reveal">
+                    <i class="fas fa-home service-icon"></i>
+                    <h3>Residential Interior</h3>
+                    <p>Complete styling and spatial planning for luxurious, comfortable living spaces tailored to your family's needs.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-1">
+                    <i class="fas fa-utensils service-icon"></i>
+                    <h3>Modular Kitchen</h3>
+                    <p>Highly functional, aesthetically pleasing contemporary kitchen designs with premium hardware and finishes.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-2">
+                    <i class="fas fa-bed service-icon"></i>
+                    <h3>Bedroom Interiors</h3>
+                    <p>Serene and personal sanctuaries designed for relaxation, featuring custom wardrobes and mood lighting.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-3">
+                    <i class="fas fa-couch service-icon"></i>
+                    <h3>Living Room Design</h3>
+                    <p>Inviting and impressive living areas that serve as the perfect backdrop for entertaining and unwinding.</p>
+                </div>
+                <div class="service-card glass-panel reveal">
+                    <i class="fas fa-briefcase service-icon"></i>
+                    <h3>Office Interiors</h3>
+                    <p>Inspiring and productive workspaces reflecting your brand identity with ergonomic and modern layouts.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-1">
+                    <i class="fas fa-building service-icon"></i>
+                    <h3>Complete Home</h3>
+                    <p>End-to-end turnkey interior solutions, handling everything from civil changes to the final decor touches.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-2">
+                    <i class="fas fa-hammer service-icon"></i>
+                    <h3>Renovation & Remodeling</h3>
+                    <p>Breathing new life into old structures with thoughtful architectural updates and modern material selection.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-3">
+                    <i class="fas fa-chair service-icon"></i>
+                    <h3>Custom Furniture</h3>
+                    <p>Bespoke furniture pieces designed specifically for your space, crafted by skilled artisans for unmatched quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h6 style="color: var(--color-accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Portfolio</h6>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A curated selection of our finest interior transformations across residential and commercial spaces.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Luxury Living Room" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">The Heritage Villa</h4>
+                        <span class="gallery-category">Luxury Interiors</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item reveal delay-1" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Modern Minimalist Kitchen" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Sleek Urban Kitchen</h4>
+                        <span class="gallery-category">Modular Kitchen</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item reveal delay-2" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Cozy Master Bedroom" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Serene Master Suite</h4>
+                        <span class="gallery-category">Bedroom</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item reveal" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Contemporary Living Space" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Contemporary Loft</h4>
+                        <span class="gallery-category">Living Room</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item reveal delay-1" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Corporate Office Interior" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Tech Hub Workspace</h4>
+                        <span class="gallery-category">Office</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item reveal delay-2" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=800&q=80" alt="Modern Home Architecture" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Minimalist Retreat</h4>
+                        <span class="gallery-category">Modern Interiors</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close image"><i class="fas fa-times"></i></button>
+        <img id="lightbox-img" src="" alt="Enlarged Project View">
+    </div>
+
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="rating-overview reveal">
+                <div class="rating-number">5.0 <span style="font-size: 2rem; color: #ccc;">/ 5</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="rating-text">Customer Satisfaction &bull; Rated 5.0 by our clients</div>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card glass-panel reveal">
+                    <div class="review-content">
+                        <div class="stars" style="font-size: 1rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="review-text">Absolutely loved the attention to detail. The final interior looked even better than we imagined. Highly professional and timely execution.</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client Avatar" class="client-avatar" loading="lazy">
+                        <div class="client-details">
+                            <h4>Priya Sharma</h4>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified Client</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card glass-panel reveal delay-1">
+                    <div class="review-content">
+                        <div class="stars" style="font-size: 1rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="review-text">Afnan Interior completely transformed our outdated living room into a modern masterpiece. The materials used feel incredibly premium.</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client Avatar" class="client-avatar" loading="lazy">
+                        <div class="client-details">
+                            <h4>Rahul Verma</h4>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified Client</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card glass-panel reveal delay-2">
+                    <div class="review-content">
+                        <div class="stars" style="font-size: 1rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="review-text">We hired them for a full modular kitchen installation. The space optimization is brilliant and the finish is flawless. Great team to work with.</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client Avatar" class="client-avatar" loading="lazy">
+                        <div class="client-details">
+                            <h4>Anjali Desai</h4>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="disclaimer">*Sample testimonials showcasing our commitment to client satisfaction.</p>
+        </div>
+    </section>
+
+    <!-- Updated Direct Contact Section -->
+    <section id="contact" class="section-padding contact-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h6 style="color: var(--color-accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Get In Touch</h6>
+                <h2 class="section-title">Let's Discuss Your Space</h2>
+                <p class="section-subtitle">Reach out to us directly to schedule a consultation or visit our studio to explore materials and finishes.</p>
+            </div>
+
+            <div class="direct-contact-grid">
+                
+                <!-- WhatsApp & Call -->
+                <div class="contact-card glass-panel reveal">
+                    <div class="icon-circle icon-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Chat & Call</h3>
+                    <p>+91 7818905281</p>
+                    <p class="sub-text">Available Mon-Sat, 10 AM - 7 PM</p>
+                    
+                    <div class="contact-actions">
+                        <a href="https://wa.me/917818905281" target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                        </a>
+                        <a href="tel:7818905281" class="btn btn-glass">
+                            <i class="fas fa-phone-alt"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-card glass-panel reveal delay-1">
+                    <div class="icon-circle icon-email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@afnaninterior.com</p>
+                    <p class="sub-text">We usually reply within 24 hours</p>
+                    
+                    <div class="contact-actions">
+                        <a href="mailto:info@afnaninterior.com" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send an Email
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-card glass-panel reveal delay-2">
+                    <div class="icon-circle icon-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Studio</h3>
+                    <p>Shop No D-684, Near Jama Masjid,<br>Badarpur, New Delhi 110044</p>
+                    <p class="sub-text">Please call ahead for an appointment</p>
+                    
+                    <div class="contact-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shop+Number+D-684,+Near+Jama+Masjid,+Jaitpur+Extension+Part+II,+Block+A,+Badarpur,+New+Delhi,+Delhi+110044" target="_blank" class="btn btn-maps">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>AFNAN INTERIOR</h2>
+                    <p>"Crafting beautiful spaces with purpose. Elevating modern living through bespoke interior design."</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://wa.me/917818905281" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Studio</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#reviews">Client Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Contact Information</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:7818905281"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> 7818905281</a></li>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #aaa;"></i> <span style="color: #aaa; line-height: 1.4; display: inline-block; vertical-align: top; max-width: 200px;">Block A, Badarpur, New Delhi, 110044</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Afnan Interior. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set Current Year in Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle logic
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const navItems = navLinks.querySelectorAll('a');
+
+        function toggleMenu() {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+            
+            const icon = hamburger.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Close mobile menu when clicking a link
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if(navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Scroll Reveal Animation via IntersectionObserver
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+
+        // Stats Counter Animation
+        const counters = document.querySelectorAll('.stat-number');
+        let hasCounted = false;
+
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasCounted) {
+                    hasCounted = true;
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        const suffix = counter.getAttribute('data-suffix') || '+';
+                        const duration = 2000; // ms
+                        const increment = target / (duration / 16); // 60fps
+                        
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.innerText = Math.ceil(current) + suffix;
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.innerText = target + suffix;
+                            }
+                        };
+                        updateCounter();
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe the stats section
+        const statsSection = document.querySelector('.stats-grid');
+        if (statsSection) {
+            counterObserver.observe(statsSection);
+        }
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            const highResSrc = imgSrc.replace('&w=800', '&w=1600');
+            lightboxImg.src = highResSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightboxImg.src = '';
+            }, 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
